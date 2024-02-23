@@ -1,0 +1,86 @@
+@charset "UTF-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    margin: auto;
+}
+
+:root {
+    --cor01:#395EBB;
+    --cor02:#445A91;
+    --cor03:#2058E5;
+    --cor04:#414C66;
+    --cor05:#30333C;
+    --cor06:#2A2D33;
+}
+
+
+body {
+    background-color: var(--cor06);               
+    font-family: Arial, Helvetica, sans-serif; 
+    
+}
+
+main {
+    
+}
+
+h1 {
+    color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+
+input, p {
+    width: 300px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;   
+}
+
+div#nickname {
+    
+}
+
+#inputBtn {    
+    width: 310px;
+    padding: 10px;
+    background-color: var(--cor03);
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+div#btnLogin {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;   
+     
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: var(--cor03);
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+
+
