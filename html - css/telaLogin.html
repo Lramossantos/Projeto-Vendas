@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Projeto Estoque</title>
 </head>
+
 <body>
     <main>
         <h1>Login</h1>
         <div id="nickname">
-            <p>Nome</p>
+            <p class="title">Nome:</p>
             <input type="name" name="name1" id="name1">
         </div>
         <div>
-            <p>Senha</p>
+            <p class="title">Senha:</p>
             <input type="password" name="name2" id="name2">
         </div>
         <div id="btnLogin">
             <input type="button" value="Login" id="inputBtn">
         </div>
-        <p>
+        <p id="esqueciSenha">
             <a href="telaMain.html" target="_blank">Esqueci a Senha</a>
         </p>
     </main>
     <script>
+        document.getElementById("inputBtn").addEventListener("click", function () {
+            var usuario = document.getElementById("name1").value;
+            var senha = document.getElementById("name2").value;
 
+            var data = {
+                username: 'kminchelle',
+                password: '0lelplR',
+            };
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://dummyjson.com/auth/login");
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        console.log("Login realizado com sucesso!");                        
+                    } else {
+                        console.error("Falha no login. Código de status: " + xhr.status);
+                    }
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        });
     </script>
 </body>
+
 </html>
